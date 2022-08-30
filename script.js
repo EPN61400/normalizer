@@ -8,9 +8,26 @@ var resultArea = document.getElementById("result");
 
 function normalizer(el) {
   var combiningText = document.getElementById("combining_text");
-  el.textContent = combiningText.value.normalize("NFC").replaceAll("’", "'");
+  el.value = combiningText.value.normalize("NFC").replaceAll("’", "'");
+}
+
+function copyToClipBoard(el) {
+  const text = el.value;
+  navigator.clipboard
+    .writeText(text)
+    .then(function () {
+      console.debug("Text copied!");
+    })
+    .catch(function (err) {
+      console.error("Error in copying text: ", err);
+    });
 }
 
 btnNormalize.addEventListener("click", function () {
   normalizer(resultArea);
+  copyToClipBoard(resultArea);
+});
+
+resultArea.addEventListener("click", function () {
+  copyToClipBoard(resultArea);
 });

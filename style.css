@@ -1,4 +1,9 @@
+html {
+  box-sizing: border-box;
+}
+
 section {
+  margin: 15px auto;
   padding: 0 10vw;
 }
 
@@ -25,6 +30,23 @@ textarea {
 #normalize {
   display: block;
   margin: 0 auto;
+  padding: 5px 15px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #30a3bd;
+  border-radius: 10px;
+  border: solid 2px #30a3bd;
+  cursor: pointer;
+  color: white;
+  transition-duration: 0.4s;
+}
+
+#normalize:hover {
+  background-color: unset;
+  border-radius: 10px;
+  border: solid 2px #30a3bd;
+  color: black;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.24), 0 5px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
 #result {
