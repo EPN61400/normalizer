@@ -1,0 +1,33 @@
+section {
+  padding: 0 10vw;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+}
+
+textarea {
+  min-width: 80vw;
+  min-height: 30vh;
+  resize: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px auto;
+}
+
+.btn-container {
+  width: 100%;
+}
+
+#normalize {
+  display: block;
+  margin: 0 auto;
+}
+
+#result {
+  background-color: #e1e1e1;
+  border: solid 2px #30a3bd;
+}
