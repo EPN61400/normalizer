@@ -13,12 +13,14 @@
 <body>
     <section>
         <label for="combining_text">Entrer le texte&nbsp;:</label>
-        <textarea name="combining_text" id="combining_text" cols="30" rows="10" autofocus spellcheck></textarea>
+        <textarea name="combining_text" id="combining_text" cols="30" rows="10" autofocus spellcheck
+            placeholder="Coller ici le texte contenant des caractères à normaliser.&#10;&#10;Cliquer sur le bouton «&nbsp;Normaliser&nbsp;».&#10;&#10;Le résultat est automatiquement copié dans le presse-papier."></textarea>
         <div class="btn-container">
             <button id="normalize" type="button"
                 title="Normalise et copie le texte dans le presse-papier">Normaliser</button>
         </div>
         <textarea id="result" readonly></textarea>
+        <div class="popup" hidden="true" id="popup"><span>Texte copié dans le presse-papier</span></div>
     </section>
 </body>
 

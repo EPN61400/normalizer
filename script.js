@@ -5,6 +5,7 @@ Le tableau ne serait pas complet sans lâ€™incontournable Bourvil, provincial naÃ
 
 var btnNormalize = document.getElementById("normalize");
 var resultArea = document.getElementById("result");
+var popUp = document.getElementById("popup");
 
 function normalizer(el) {
   var combiningText = document.getElementById("combining_text");
@@ -17,6 +18,10 @@ function copyToClipBoard(el) {
     .writeText(text)
     .then(function () {
       console.debug("Text copied!");
+      popUp.setAttribute("hidden", "false");
+      setTimeout(function () {
+        popUp.setAttribute("hidden", "true");
+      }, 2000);
     })
     .catch(function (err) {
       console.error("Error in copying text: ", err);
